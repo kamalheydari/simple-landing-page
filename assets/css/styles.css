@@ -1,0 +1,123 @@
+@font-face {
+  font-family: Tanha;
+  src: url("../fonts/Tanha-FD.eot");
+  src: url("../fonts/Tanha-FD.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Tanha-FD.woff2") format("woff2"),
+    url("../fonts/Tanha-FD.woff") format("woff"),
+    url("../fonts/Tanha-FD.ttf") format("truetype");
+  font-weight: normal;
+}
+
+:root {
+  --grayColor-1: #eee;
+  --grayColor-2: #666;
+  --buleColor-1: #2980b9;
+  --buleColor-2: #547b95;
+
+  --r1: 0.5rem;
+  --r2: 1rem;
+  --r3: 1.5rem;
+  --r4: 2rem;
+  --r5: 2.5rem;
+  --r6: 3rem;
+  --r7: 3.5rem;
+  --r8: 4rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: clamp(15px, 3vw, 20px);
+  direction: rtl;
+}
+p {
+  font-size: 1.2rem;
+}
+body {
+  font-family: Tanha;
+  background: var(--grayColor-1);
+}
+
+.container {
+  height: 100vh;
+  width: min(100%, 1224px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--r3);
+}
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  padding: var(--r4) var(--r2) 0;
+}
+
+.content__title {
+  font-size: var(--r5);
+  color: var(--buleColor-1);
+}
+
+.content__paragraph {
+  color: var(--grayColor-2);
+  text-align: justify;
+  width: 80%;
+}
+
+.content__count-down {
+  display: flex;
+  direction: ltr;
+  gap: var(--r2);
+}
+.box {
+  background-color: #fff;
+  width: var(--r6);
+  text-align: center;
+}
+.box h4 {
+  color: var(--grayColor-2);
+}
+
+.box span {
+  color: var(--buleColor-2);
+}
+
+.content__btn {
+  display: inline-block;
+  background-color: var(--buleColor-2);
+  color: #fff;
+  padding: var(--r1) var(--r2);
+  transition: background-color 0.3s;
+}
+.content__btn:hover {
+  background-color: var(--buleColor-1);
+}
+img {
+  width: 100%;
+}
+.img {
+  height: 40vh;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+  .img {
+    height: 60vh;
+  }
+}
